@@ -1,0 +1,45 @@
+# This file contains the configuration for platforms and symbols.
+# Please note that my personal token for OpenExchange is used here.
+# Do not use this token for other purposes or share it with third parties.
+
+symbols:
+  USDT: "USDT"
+  BTCUSDT: "BTC"
+  LTCUSDT: "LTC"
+  TRXUSDT: "TRX"
+  tBTCUSD: "BTC"
+  tLTCUSD: "LTC"
+  tTRXUSD: "TRX"
+
+platforms:
+  Bybit:
+    url: "https://api-testnet.bybit.com/v5/market/tickers?category=linear&symbol={symbol}"
+    symbols:
+      - "BTCUSDT"
+      - "TRXUSDT"
+
+  Binance:
+    url: "https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
+    symbols:
+      - "BTCUSDT"
+      - "TRXUSDT"
+      - "LTCUSDT"
+
+  BitFinex:
+    url: "https://api-pub.bitfinex.com/v2/ticker/{symbol}"
+    symbols:
+      - "tBTCUSD"
+      - "tTRXUSD"
+      - "tLTCUSD"
+
+  Solarpath:
+    url: "https://api.solarpath.io/v1/{token_solarpath}/price2usd/{symbol}"
+    symbols:
+      - "USDT"
+
+exchangers:
+  Openexchange:
+    url: "https://openexchangerates.org/api/latest.json?app_id={token_openexchange}}"
+
+token_solarpath=9b1fce5cbcb0d19b6af32821d3b2d2e5
+token_openexchange=7b448cdc0755442696c2663505022082
